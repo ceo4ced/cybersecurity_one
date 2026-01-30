@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity 1 | North Carolina Cyber Academy</title>
+    <meta name="description"
+        content="Cybersecurity 1 resources and tools for Mr. Williams' class at North Carolina Cyber Academy">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: #fff;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2em;
+            color: #B3A369;
+            font-weight: 600;
+        }
+
+        .hero .instructor {
+            margin-top: 8px;
+            color: #aaa;
+            font-size: 1em;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            width: 100%;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .menu-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .menu-card h2 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .menu-card p {
+            font-size: 0.95em;
+            color: #bbb;
+            line-height: 1.5;
+        }
+
+        .menu-card .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.85em;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .footer .brand {
+            color: #B3A369;
+            font-weight: 600;
+        }
+
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(102, 126, 234, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="particles" id="particles"></div>
+
+    <div class="hero">
+        <div class="logo">🛡️</div>
+        <h1>Cybersecurity 1</h1>
+        <p class="subtitle">North Carolina Cyber Academy</p>
+        <p class="instructor">Mr. Williams</p>
+    </div>
+
+    <div class="menu-container">
+        <a href="CyberRange_Password_Lookup.html" class="menu-card">
+            <span class="icon">🔐</span>
+            <h2>CYBER.ORG Range Login</h2>
+            <p>Look up your credentials for the CYBER.ORG Range platform using your Student ID.</p>
+            <span class="badge">Student Tool</span>
+        </a>
+
+        <a href="https://apps.cyber.org" class="menu-card" target="_blank" rel="noopener">
+            <span class="icon">🖥️</span>
+            <h2>CYBER.ORG Range</h2>
+            <p>Access the CYBER.ORG Range platform for hands-on cybersecurity labs and exercises.</p>
+            <span class="badge">External</span>
+        </a>
+
+        <a href="README.md" class="menu-card">
+            <span class="icon">📚</span>
+            <h2>Documentation</h2>
+            <p>View course documentation, setup guides, and important information.</p>
+            <span class="badge">Info</span>
+        </a>
+    </div>
+
+    <div class="footer">
+        <span class="brand">North Carolina Cyber Academy</span> &bull; Cybersecurity 1 &bull; 2025
+    </div>
+
+    <script>
+        // Create floating particles
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 20;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    </script>
+</body>
+
+</html>
